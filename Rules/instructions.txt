@@ -1,0 +1,26 @@
+🛑 La funcion del ejercicio acepta un numero entero positivo 
+que devuelve en formato de texto, la cantidad de tiempo en un
+formato especifico. 🛑
+
+🕐 El tiempo apremia... 🏃‍♂️💨
+
+❓ Objetivos.
+Step 1️⃣: Validaciones.
+ - El parametro dado no puede ser un string ni contener espacios en blanco.
+ - Si el parametro dado es igual a 0 retornar "now".
+ - Aceptar solo numeros positivos.
+ - Que independientemente del formato, obtenga los numeros.
+
+Step 2️⃣: Correcciones.
+ - Dentro del codigo se encuentran multiples discrepancias o "errores",
+ encuentralos, resuelvelos y verifica que la funcion devuelva la
+ respuesta esperada.
+
+💡 Tips.
+ - Ejemplo del valor dado: console.log(formatDuration(31558624));
+ - Ejemplo del resultado: 1 year, 6 hours, 17 minutes and 4 seconds.
+
+🔎 Pista: Son 4 errores.
+
+
+🏆 Sin mas que aclarar, may the force be with you. 🏁
