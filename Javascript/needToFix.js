@@ -1,9 +1,7 @@
 function formatDuration(seconds) {
   let i, j, l;
-  if (seconds.toString().trim() == "") return 'Insert a number';
-  if (seconds == 0) return 'Now!!';
-  if (seconds < 0) return `Insert a positive number`; 
-  if (isNaN(seconds)) return'This not a number';
+  
+  //Validations
 
     let year = ~~~(seconds / 31536000);
     let day = ~~((seconds % 31536000) / 86400);
