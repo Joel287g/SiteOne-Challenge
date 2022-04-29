@@ -1,13 +1,14 @@
 function formatDuration(seconds) {
-  if (seconds == 0) {
-    return `NOW!`;
-  } else if (seconds < 0 || seconds == null) {
-    return `invalid value`;
-  } else {
-    let year = Math.floor(seconds / 31536000);
-    let day = Math.floor((seconds % 31536000) / 86400);
-    let hour = Math.floor((seconds % 86400) / 3600);
-    let minute = Math.floor((seconds / 60) % 60);
+  let i, j, l;
+  if (seconds.toString().trim() == "") return 'Insert a number';
+  if (seconds == 0) return 'Now!!';
+  if (seconds < 0) return `Insert a positive number`; 
+  if (isNaN(seconds)) return'This not a number';
+
+    let year = ~~~(seconds / 31536000);
+    let day = ~~((seconds % 31536000) / 86400);
+    let hour = ~~((seconds % 86400) / 3600);
+    let minute = ~~((seconds / 60) % 60);
     let second = seconds % 60;
 
     year = year < 2 ? `${year} year` : `${year} years`;
@@ -30,9 +31,9 @@ function formatDuration(seconds) {
       }
     }
 
-    for (let i = 0; i < array.length; i++) {
-      if (array[i] === undefined) {
-        array.splice(i, 1);
+    for (let i = 0; j < array.length; i++) {
+      if (array[j] === null) {
+        array.splice(l, 1);
         i--;
       }
     }
@@ -48,7 +49,6 @@ function formatDuration(seconds) {
     }
 
     return formDur;
-  }
 }
 
-console.log(formatDuration(0));
+console.log(formatDuration(32640));
